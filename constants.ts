@@ -5,17 +5,23 @@
  */
 export const sweetNotes: string[] = [
   "You're the first thing I think of every morning and the last thing on my mind every night.",
-  "Distance means so little when someone means so much.",
   "Long distance doesn't make me love you less, it grows a stronger and stronger love everyday",
   "Every day I think about how great my day would be if I opened my eyes next to you",
   "Seeing your face enlightens my day.",
   "My heart is yours, wherever you are.",
-  "Thinking of your smile makes my entire day better.",
-  "I am so proud of you and everything you're doing. Keep shining, my love.",
-  "Exploring the world with you is (according to me) the purest form of love",
-  "Missing you is my heart's way of reminding me how much I love you.",
+  "I am so proud of you and everything you're doing. Keep shining my love.",
+  "Exploring the world with you is (according to me) the purest form of love.",
   "Even on my busiest days, the thought of you sticks to my head.",
-  "Can't wait our 'see you later' becomes a 'see you tonight."
+  "Can't wait our 'see you later' becomes a 'see you tonight. (i.e living together if you didn't get it)",
+  "Listening to you yapping (dont get angry) after your day is so cute I want all your days to be full.",
+  "Your giggle never fails to make me smile (that is why I ragebait you <3)",
+  "Your face and your smile has magic effects on me it instantly makes me smile (so crazy wtf).",
+  "The warmth of your body when we cuddle or sleep together is so comforting than even a raclette is lame compared to it",
+  "Your prettiness is only matched by your kindness (AND YOU VERY KIND VERY VERY KIND)",
+  "I love how you take care of me even though I wanna make you feel like my princess and be strong man ROARR",
+  "Being the man you love is the greatest thing that could happen",
+  "Your supportiveness is more worth than the most expensive thing on earth (which is Antimatter btw, a nerd thing)"
+  
 ];
 
 export const START_DATE = "2025-04-12T10:30:00";
