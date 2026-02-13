@@ -31,7 +31,7 @@ const LyricsModal: React.FC<LyricsModalProps> = ({ isOpen, onClose }) => {
         <div className="mb-6 text-center">
           {/* Titre avec la nouvelle police Serif */}
           <h2 className="font-serif italic text-3xl text-slate-800 tracking-tight">Je l'aime à mourir</h2>
-          <p className="text-[10px] uppercase tracking-[0.2em] text-emerald-600/60 font-medium mt-2">A french song that reminds me of you <3</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-emerald-600/60 font-medium mt-2">A french song that reminds me of you :)</p>
         </div>
 
         <div className="overflow-y-auto pr-4 custom-scrollbar text-center">
