@@ -20,7 +20,10 @@ export const sweetNotes: string[] = [
   "Your prettiness is only matched by your kindness (AND YOU VERY KIND VERY VERY KIND)",
   "I love how you take care of me even though I wanna make you feel like my princess and be strong man ROARR",
   "Being the man you love is the greatest thing that could happen",
-  "Your supportiveness is more worth than the most expensive thing on earth (which is Antimatter btw, a nerd thing)"
+  "Your supportiveness is more worth than the most expensive thing on earth (which is Antimatter btw, a nerd thing)",
+  "If I had to fly a plane to see you right now I wouldn't even look at the plane or the company (which is crazy because i love to take cool planes)",
+  "I would skip a chest day to see your pretty face"
+  
   
 ];
 
