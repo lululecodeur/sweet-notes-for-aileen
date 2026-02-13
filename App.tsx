@@ -61,10 +61,10 @@ const App: React.FC = () => {
       <header className="mb-8 text-center animate-fade-in relative">
         {/* Police Serif élégante au lieu de la police cursive */}
         <h1 className="font-serif text-4xl md:text-5xl text-slate-800 mb-3 tracking-tight">
-          The <span className="text-emerald-600 italic">Sweet</span> Box
+          The <span className="text-emerald-600 italic">Sweet</span> Box (idk how to call it)
         </h1>
         <p className="text-slate-400 font-light tracking-[0.2em] uppercase text-[10px] md:text-xs">
-          A collection of thoughts for you
+          Some thoughts about you to make your day a bit better :)
         </p>
       </header>
 
@@ -116,7 +116,7 @@ const App: React.FC = () => {
           </button>
           
           <p className="text-slate-400 text-sm font-light tracking-wide italic">
-            Thinking of you, every single day
+            Don't forget to send pic of you every single day I love it
           </p>
         </div>
       </main>
@@ -125,7 +125,7 @@ const App: React.FC = () => {
       <LyricsModal isOpen={isLyricsOpen} onClose={() => setIsLyricsOpen(false)} />
 
       <footer className="mt-auto pt-8 text-slate-300 text-[9px] uppercase tracking-[0.3em]">
-        Made with care
+        Made with care and nasi goreng
       </footer>
 
       <style dangerouslySetInnerHTML={{ __html: `
