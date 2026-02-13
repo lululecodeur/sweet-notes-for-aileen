@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 
 interface HeartConfettiProps {
@@ -20,22 +19,23 @@ const HeartConfetti: React.FC<HeartConfettiProps> = ({ trigger }) => {
   useEffect(() => {
     if (trigger === 0) return;
 
-    const colors = ['#ff8fab', '#fb6f92', '#ffc2d1', '#ffe5ec', '#ffb3c1'];
-    const newParticles: Particle[] = Array.from({ length: 20 }).map((_, i) => ({
+    // Nouvelle palette : Verts pastels, Émeraude et une touche d'Or
+    const colors = ['#a7f3d0', '#6ee7b7', '#34d399', '#fef3c7', '#059669'];
+    
+    const newParticles: Particle[] = Array.from({ length: 25 }).map((_, i) => ({
       id: Date.now() + i,
       left: `${Math.random() * 100}%`,
-      size: Math.random() * 20 + 15,
+      size: Math.random() * 15 + 10, // Un peu plus petit pour faire plus "poussière d'étoile"
       color: colors[Math.floor(Math.random() * colors.length)],
-      duration: Math.random() * 2 + 2,
+      duration: Math.random() * 2 + 1.5,
       rotation: Math.random() * 360
     }));
 
     setParticles(prev => [...prev, ...newParticles]);
 
-    // Cleanup old particles
     const timer = setTimeout(() => {
       setParticles(prev => prev.filter(p => !newParticles.includes(p)));
-    }, 4000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, [trigger]);
@@ -50,20 +50,37 @@ const HeartConfetti: React.FC<HeartConfettiProps> = ({ trigger }) => {
             left: p.left,
             bottom: '-50px',
             animationDuration: `${p.duration}s`,
-            color: p.color
+            color: p.color,
+            position: 'fixed',
+            zIndex: 50,
+            pointerEvents: 'none'
           }}
         >
+          {/* SVG d'étoile (Sparkle) au lieu du cœur */}
           <svg
             width={p.size}
             height={p.size}
             viewBox="0 0 24 24"
             fill="currentColor"
-            style={{ transform: `rotate(${p.rotation}deg)` }}
+            style={{ 
+              transform: `rotate(${p.rotation}deg)`,
+              filter: 'drop-shadow(0 0 5px currentColor)' // Petit effet brillant
+            }}
           >
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            <path d="M12 1L14.39 8.26L22 9.27L16.45 14.46L18.18 22L12 17.77L5.82 22L7.55 14.46L2 9.27L9.61 8.26L12 1Z" />
           </svg>
         </div>
       ))}
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes fall {
+          0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+          100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }
+        .heart-particle {
+          animation: fall linear forwards;
+        }
+      `}} />
     </>
   );
 };
